@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_two"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <Button
+        android:text="length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLength" />
+
+    <Button
+        android:text="weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnWeight"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnLength"
+        android:layout_toEndOf="@+id/btnLength" />
+    <Button
+        android:text="area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnArea"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnWeight"
+        android:layout_toEndOf="@+id/btnWeight"/>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/layoutWeight"
+        tools:visibility="gone">
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/layoutArea"
+        android:visibility="gone">
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/layoutLengh"
+        android:visibility="visible"
+        android:layout_below="@+id/btnLength"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <!--<TextView-->
+            <!--android:text="value1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/value1"-->
+            <!--android:layout_weight="1" />-->
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/unitspinner1"
+                android:layout_weight="0.70" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="?android:attr/homeAsUpIndicator"
+                android:id="@+id/imageView"
+                android:rotation="180"
+                android:layout_weight="1" />
+
+            <!--<TextView-->
+            <!--android:text="value2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/value2"-->
+            <!--android:layout_weight="1" />-->
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/unitspinner2"
+                android:layout_alignBottom="@+id/layoutLengh"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="false"
+                android:layout_weight="0.42" />
+
+            <Button
+                android:text="CH"
+                android:layout_width="49dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/change" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_below="@+id/layoutLengh"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <EditText
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/inputnum1" />
+
+            <TextView
+                android:text="="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:layout_weight="0.2"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/inputnum2" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:layout_below="@+id/layoutLengh"
+        android:layout_toRightOf="@+id/layoutArea">
+
+        <TextView
+            android:text="0 Milimeter(mm)"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/unit1"
+            android:elevation="1dp" />
+
+        <TextView
+            android:text="0 Centimeter(cm)"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/unit2" />
+
+        <TextView
+            android:text="0 Meter(m)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unit3" />
+
+        <TextView
+            android:text="0 Kilometer(km)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unit4" />
+
+        <TextView
+            android:text="0 inch(in)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unit5"
+            android:elevation="1dp" />
+
+        <TextView
+            android:text="0 feet(ft)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unit6" />
+    </GridLayout>
+
+
+</RelativeLayout>
